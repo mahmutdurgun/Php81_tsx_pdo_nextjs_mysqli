@@ -11,7 +11,8 @@ Konteynerin içine girdikten sonra (ssh mahmut@localhost -p 2222 ile veya docker
 
 Not: Next.js bir Node.js uygulaması olduğu için, projeyi çalıştırmak için ayrıca npm run dev veya npm run start gibi komutları SSH üzerinden veya docker exec ile manuel olarak çalıştırmanız gerekecektir. Apache sadece PHP dosyalarınızı sunacaktır.
 
-
+env değikeni olarak ekle
 # Proje 1 (Next.js) için benzersiz portlar
 HOST_HTTP_PORT=8086
 HOST_SSH_PORT=2222
+
