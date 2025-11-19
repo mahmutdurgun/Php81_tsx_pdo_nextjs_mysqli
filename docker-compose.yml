@@ -5,9 +5,10 @@ services:
     # 8086:80 -> HTTP (Mevcut port)
     # 2222:22 -> SSH (Yeni port)
     ports:
-      - "8086:80"
-      - "2222:22"
+      - "8096:80"
+      - "2232:22"
     volumes:
       - /home/umbrel/web/www/:/var/www/html/
+
 
     restart: always
