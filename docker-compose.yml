@@ -2,13 +2,13 @@ version: '3.8'
 services:
   web:
     build: .
-    # 8086:80 -> HTTP (Mevcut port)
-    # 2222:22 -> SSH (Yeni port)
     ports:
-      - "8096:80"
-      - "2232:22"
+      # HTTP host portu artık HOST_HTTP_PORT değişkeninden okunur
+      - "${HOST_HTTP_PORT}:80"
+      # SSH host portu artık HOST_SSH_PORT değişkeninden okunur
+      - "${HOST_SSH_PORT}:22"
     volumes:
-      - /home/umbrel/web/www/:/var/www/html/
-
+      # Volume yolu için önceki gibi proje adını kullanmaya devam ediyoruz
+      - /home/umbrel/web/${COMPOSE_PROJECT_NAME}/www/:/var/www/html/
 
     restart: always
